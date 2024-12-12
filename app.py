@@ -41,7 +41,7 @@ def predict():
         prediction = model.predict(final_features)
         predicted_price = prediction[0]
 
-        return render_template('index.html', prediction_text=f'Predicted Price: ₹{predicted_price:,.2f}')
+        return render_template('index.html', prediction_text=f'Predicted Price in Lakhs: ₹{predicted_price:,.2f}')
 
     except Exception as e:
         return render_template('index.html', prediction_text=f'Error: {str(e)}')
